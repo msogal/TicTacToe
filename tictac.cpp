@@ -17,6 +17,7 @@ int main(){
       board[i][j]=' ';
     }
   }
+  cout<<"X wins: "<<xwins<<"\t"<<"O wins: "<<owins<<"\t"<<"Ties: "<<ties<<endl;
   printBoard(board);
   while(playing){
     //print the board
@@ -54,7 +55,7 @@ int main(){
       playing = false;
       cout<<player<<" won!"<<endl;
       if(player=='X'){
-	xwin++;
+	xwins++;
       }else if(player=='O'){
 	owins++;
       }
@@ -83,6 +84,7 @@ int main(){
   return 0;
 }
 void printBoard(char nboard[3][3]){
+  //print victory counts
   //print column adresses
   cout<<"\t1\t2\t3\t"<<endl;
   //print row addresses
